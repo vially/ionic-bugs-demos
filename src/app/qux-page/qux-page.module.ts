@@ -4,12 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { DemoCanvasModule } from '../demo-canvas/demo-canvas.module';
-import { BarPagePage } from './bar-page.page';
+import { QuxPagePage } from './qux-page.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: BarPagePage
+    component: QuxPagePage
   }
 ];
 
@@ -19,8 +19,8 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     DemoCanvasModule,
-    RouterModule.forChild(routes),
+    RouterModule.forChild(routes)
   ],
-  declarations: [BarPagePage]
+  declarations: [QuxPagePage]
 })
-export class BarPagePageModule {}
+export class QuxPagePageModule {}
