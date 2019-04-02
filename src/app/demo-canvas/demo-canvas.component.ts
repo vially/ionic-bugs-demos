@@ -2,7 +2,7 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-demo-canvas',
-  template: `<canvas #canvas style="width: 100%; height: 100%;"></canvas>`
+  template: `<canvas #canvas style="width: 100%; height: 100%; background-color: #ccc;"></canvas>`
 })
 export class DemoCanvasComponent implements AfterViewInit {
   @ViewChild('canvas') canvasEl: ElementRef<HTMLCanvasElement>;
