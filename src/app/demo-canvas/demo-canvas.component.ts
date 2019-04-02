@@ -7,7 +7,13 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 export class DemoCanvasComponent implements AfterViewInit {
   @ViewChild('canvas') canvasEl: ElementRef<HTMLCanvasElement>;
 
-  ngAfterViewInit() {
+  constructor(private hostElement: ElementRef) {}
+
+  async ngAfterViewInit() {
+    const content = this.hostElement.nativeElement.closest('ion-content');
+    if (content) {
+      await content.componentOnReady();
+    }
     this.printCanvasSize('canvas size on view init');
     setTimeout(() => this.printCanvasSize('canvas size after timeout'), 500);
   }
