@@ -1,17 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { RouterModule, Routes } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
-import { DemoCanvasDivPage } from '../demo-canvas/demo-canvas-div.page';
 import { DemoCanvasModule } from '../demo-canvas/demo-canvas.module';
-import { DemoCanvasIonContentPage } from '../demo-canvas/demo-canvas.page';
-import { DemoPage } from './demo.page';
+import { DemoDivPage } from './demo-div.page';
+import { DemoIonContentPage } from './demo-ion-content.page';
 
 const routes: Routes = [
-  { path: '', component: DemoPage },
-  { path: 'canvas-ion-content-page', component: DemoCanvasIonContentPage },
-  { path: 'canvas-div-page', component: DemoCanvasDivPage },
+  { path: '', component: DemoIonContentPage },
+  { path: 'sidenav-inside-div', component: DemoDivPage },
 ];
 
 @NgModule({
@@ -19,9 +18,10 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    MatSidenavModule,
     DemoCanvasModule,
     RouterModule.forChild(routes),
   ],
-  declarations: [DemoPage]
+  declarations: [DemoIonContentPage, DemoDivPage]
 })
 export class FooPagePageModule {}
