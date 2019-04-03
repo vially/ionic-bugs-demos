@@ -6,10 +6,10 @@ import { IonicModule } from '@ionic/angular';
 import { DemoCanvasDivPage } from '../demo-canvas/demo-canvas-div.page';
 import { DemoCanvasModule } from '../demo-canvas/demo-canvas.module';
 import { DemoCanvasIonContentPage } from '../demo-canvas/demo-canvas.page';
-import { FooPagePage } from './foo-page.page';
+import { DemoPage } from './demo.page';
 
 const routes: Routes = [
-  { path: '', component: FooPagePage },
+  { path: '', component: DemoPage },
   { path: 'canvas-ion-content-page', component: DemoCanvasIonContentPage },
   { path: 'canvas-div-page', component: DemoCanvasDivPage },
 ];
@@ -22,6 +22,6 @@ const routes: Routes = [
     DemoCanvasModule,
     RouterModule.forChild(routes),
   ],
-  declarations: [FooPagePage]
+  declarations: [DemoPage]
 })
 export class FooPagePageModule {}
