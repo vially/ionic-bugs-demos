@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab One
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Broken ion-select</ion-label>
+    <ion-select>
+      <ion-select-option
+        *ngFor="let option of brokenOptions$ | async"
+        [selected]="option.selected"
+      >
+        {{option.label}}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Working ion-select</ion-label>
+    <ion-select>
+      <ion-select-option
+        *ngFor="let option of workingOptions$ | async"
+        [selected]="option.selected"
+      >
+        {{option.label}}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-content>
